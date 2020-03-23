@@ -1,35 +1,35 @@
 module.exports = {
   siteMetadata: {
-    title: `Novela by Narative`,
-    name: `Narative`,
-    siteUrl: `https://novela.narative.co`,
+    title: `Blog - Ayush Gupta`,
+    name: `Ayush Gupta's Blog`,
+    siteUrl: `http://ayushgupta.tech/blog`,
     description: `This is my description that will be used in the meta tags and important for search results`,
     hero: {
-      heading: `Welcome to Novela, the simplest way to start publishing with Gatsby.`,
-      maxWidth: 652,
+      heading: `thoughts.`,
+      maxWidth: 652
     },
     social: [
       {
         name: `twitter`,
-        url: `https://twitter.com/narative`,
+        url: `https://twitter.com/_guptaji_`
       },
       {
         name: `github`,
-        url: `https://github.com/narative`,
+        url: `https://github.com/gupta-ji6`
       },
       {
         name: `instagram`,
-        url: `https://instagram.com/narative.co`,
+        url: `https://www.instagram.com/_.guptaji._/`
       },
       {
         name: `linkedin`,
-        url: `https://www.linkedin.com/company/narative/`,
+        url: `https://www.linkedin.com/in/guptaji6/`
       },
       {
         name: `dribbble`,
-        url: `https://dribbble.com/narativestudio`,
-      },
-    ],
+        url: `https://dribbble.com/narativestudio`
+      }
+    ]
   },
   plugins: [
     {
@@ -40,10 +40,10 @@ module.exports = {
         basePath: "/",
         authorsPage: true,
         sources: {
-          local: true,
+          local: true
           // contentful: true,
-        },
-      },
+        }
+      }
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -54,8 +54,8 @@ module.exports = {
         background_color: `#fff`,
         theme_color: `#fff`,
         display: `standalone`,
-        icon: `src/assets/favicon.png`,
-      },
-    },
-  ],
+        icon: `src/assets/favicon.png`
+      }
+    }
+  ]
 };
