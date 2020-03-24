@@ -5,22 +5,11 @@
     I enjoy building, learning & exploring things that live on the web.
 
     I often write blogs and design things.
-  avatar: ./avatars/dennis-brotzky.jpg
+  avatar: ./avatars/ayush-gupta.jpg
   social:
     - url: https://github.com/gupta-ji6
     - url: https://twitter.com/_guptaji_
     - url: https://www.instagram.com/_.guptaji._/
     - url: https://www.linkedin.com/in/guptaji6/
+    - url: https://www.facebook.com/guptaji.6
   featured: true
-
-- name: Thiago Costa
-  bio: |
-    Written by You. This is where your author bio lives. Share your work, your
-    joys and of course, your Twitter handle.
-  avatar: ./avatars/thiago-costa.png
-  social:
-    - url: https://unsplash.com
-    - url: https://stackoverflow.com
-    - url: https://github.com
-    - url: https://github.com
-    - url: https://github.com

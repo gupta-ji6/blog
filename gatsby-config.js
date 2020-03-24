@@ -24,10 +24,6 @@ module.exports = {
       {
         name: `linkedin`,
         url: `https://www.linkedin.com/in/guptaji6/`
-      },
-      {
-        name: `dribbble`,
-        url: `https://dribbble.com/narativestudio`
       }
     ]
   },
