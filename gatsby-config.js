@@ -8,6 +8,7 @@ module.exports = {
       heading: `thoughts.`,
       maxWidth: 652,
     },
+    pathPrefix: "/blog",
     social: [
       {
         name: `twitter`,
