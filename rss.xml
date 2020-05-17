@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog - Ayush Gupta]]></title><description><![CDATA[This is my description that will be used in the meta tags and important for search results]]></description><link>http://ayushgupta.tech/blog</link><image><url>http://ayushgupta.tech/blog/icons/icon-512x512.png</url><title>Blog - Ayush Gupta</title><link>http://ayushgupta.tech/blog</link></image><generator>GatsbyJS</generator><lastBuildDate>Sun, 17 May 2020 08:38:53 GMT</lastBuildDate><atom:link href="http://ayushgupta.tech/blog/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[How To Play GIF In Your Terminal]]></title><description><![CDATA[A tutorial on playing GIF in your terminal using gif-for-cli in Linux or Mac OS.]]></description><link>http://ayushgupta.tech/blog/how-to-play-gif-in-your-terminal</link><guid isPermaLink="false">http://ayushgupta.tech/blog/how-to-play-gif-in-your-terminal</guid><dc:creator><![CDATA[Ayush Gupta]]></dc:creator><pubDate>Thu, 27 Jun 2019 00:00:00 GMT</pubDate><content:encoded>function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i &lt; sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i &lt; sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; target[key] = source[key]; } return target; }
+
+/* @jsx mdx */
+var _frontmatter = {
+  &quot;title&quot;: &quot;How To Play GIF In Your Terminal&quot;,
+  &quot;author&quot;: &quot;Ayush Gupta&quot;,
+  &quot;date&quot;: &quot;2019-06-27T00:00:00.000Z&quot;,
+  &quot;hero&quot;: &quot;./images/gif-in-terminal.webp&quot;,
+  &quot;excerpt&quot;: &quot;A tutorial on playing GIF in your terminal using gif-for-cli in Linux or Mac OS.&quot;
+};
+
+var makeShortcode = function makeShortcode(name) {
+  return function MDXDefaultShortcode(props) {
+    console.warn(&quot;Component &quot; + name + &quot; was not imported, exported, or provided by MDXProvider as global scope&quot;);
+    return mdx(&quot;div&quot;, props);
+  };
+};
+
+var layoutProps = {
+  _frontmatter: _frontmatter
+};
+var MDXLayout = &quot;wrapper&quot;;
+return function MDXContent(_ref) {
+  var components = _ref.components,
+      props = _objectWithoutProperties(_ref, [&quot;components&quot;]);
+
+  return mdx(MDXLayout, _extends({}, layoutProps, props, {
+    components: components,
+    mdxType: &quot;MDXLayout&quot;
+  }), mdx(&quot;p&quot;, null, &quot;You might have seen ASCII arts on your terminal like the ones below when installing a new module/library in your system. Some developers (or even you might have) configure a static ASCII art which appear when they open their terminal. But have you ever seen a GIF running in your Swiss Army knife like terminal? \uD83D\uDC40 That would give life and a personality to your terminal!&quot;), mdx(&quot;div&quot;, {
+    &quot;className&quot;: &quot;Image__Medium&quot;
+  }, &quot;\n  &quot;, mdx(&quot;span&quot;, _extends({
+    parentName: &quot;div&quot;
+  }, {
+    &quot;className&quot;: &quot;gatsby-resp-image-wrapper&quot;,
+    &quot;style&quot;: {
+      &quot;position&quot;: &quot;relative&quot;,
+      &quot;display&quot;: &quot;block&quot;,
+      &quot;marginLeft&quot;: &quot;auto&quot;,
+      &quot;marginRight&quot;: &quot;auto&quot;,
+      &quot;maxWidth&quot;: &quot;1500px&quot;
+    }
+  }), &quot;\n      &quot;, mdx(&quot;span&quot;, _extends({
+    parentName: &quot;span&quot;
+  }, {
+    &quot;className&quot;: &quot;gatsby-resp-image-background-image&quot;,
+    &quot;style&quot;: {
+      &quot;paddingBottom&quot;: &quot;33.33333333333333%&quot;,
+      &quot;position&quot;: &quot;relative&quot;,
+      &quot;bottom&quot;: &quot;0&quot;,
+      &quot;left&quot;: &quot;0&quot;,
+      &quot;backgroundImage&quot;: &quot;url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAIAAACHqfpvAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABfElEQVQY01XQW0vCYBjA8YFB3dVVd0FJB5fN6Xz3zk2LRVZEehHUhRRRWK1VpOK2txOVRAfd0iDqVvsMku7wzr5aMzrQw4/n4rl54E/Y2LKwbbvY6XSZjtVyrDa2zB9tx3q3TcvFpuvYH/hX02wR6q1+cXeHLlHhDOWQclM1ak+Gbuj3euWL/mDoL6/P16XzUukKaSeKhjQNqYpWf2sQIxDERBgXGTbBkBy1sLomshBGojTL0VE2xIAAFcpub02FQ6FImOO9A8XF6DBNlvUyMcCKg0LS0w9neyh+MbM5KyT4GXEhlU4uLS+m0lxiWpIkKMRjAp+cj88luxIzsFqrEr5Jto8WemnBRwJiKMinVsbJwPDYhPdwIjg1GiCH/P6dbDYKQRQABkAAYIQBk0GqXKkQmVxxvaCt59WNgpbJq+jm9uD4aFeW9w7kXXl/Z1+SDg8fqwY6VRDSFFVRv6ZYLNYbDQJ3HOz+8Wp7JZ2O++2ju1tebexY7j/N9vsn2zK6LbqaWeQAAAAASUVORK5CYII=&apos;)&quot;,
+      &quot;backgroundSize&quot;: &quot;cover&quot;,
+      &quot;display&quot;: &quot;block&quot;
+    }
+  })), &quot;\n  &quot;, mdx(&quot;picture&quot;, {
+    parentName: &quot;span&quot;
+  }, &quot;\n        &quot;, mdx(&quot;source&quot;, _extends({
+    parentName: &quot;picture&quot;
+  }, {
+    &quot;srcSet&quot;: [&quot;/static/8022c73581301d3aa3e40c6a80b563f5/4004c/ascii-in-terminal.webp 1500w&quot;],
+    &quot;sizes&quot;: &quot;(max-width: 1500px) 100vw, 1500px&quot;,
+    &quot;type&quot;: &quot;image/webp&quot;
+  })), &quot;\n        &quot;, mdx(&quot;source&quot;, _extends({
+    parentName: &quot;picture&quot;
+  }, {
+    &quot;srcSet&quot;: [&quot;/static/8022c73581301d3aa3e40c6a80b563f5/de2df/ascii-in-terminal.png 1500w&quot;],
+    &quot;sizes&quot;: &quot;(max-width: 1500px) 100vw, 1500px&quot;,
+    &quot;type&quot;: &quot;image/png&quot;
+  })), &quot;\n        &quot;, mdx(&quot;img&quot;, _extends({
+    parentName: &quot;picture&quot;
+  }, {
+    &quot;className&quot;: &quot;gatsby-resp-image-image&quot;,
+    &quot;src&quot;: &quot;/static/8022c73581301d3aa3e40c6a80b563f5/de2df/ascii-in-terminal.png&quot;,
+    &quot;alt&quot;: &quot;Alt text&quot;,
+    &quot;title&quot;: &quot;Logo Title Text 1&quot;,
+    &quot;loading&quot;: &quot;lazy&quot;,
+    &quot;style&quot;: {
+      &quot;width&quot;: &quot;100%&quot;,
+      &quot;height&quot;: &quot;100%&quot;,
+      &quot;margin&quot;: &quot;0&quot;,
+      &quot;verticalAlign&quot;: &quot;middle&quot;,
+      &quot;position&quot;: &quot;absolute&quot;,
+      &quot;top&quot;: &quot;0&quot;,
+      &quot;left&quot;: &quot;0&quot;
+    }
+  })), &quot;\n      &quot;), &quot;\n    &quot;)), mdx(&quot;p&quot;, null, &quot;Nothing is impossible. Now even playing a GIF on your terminal is possible. GIF has been around us for long 31 years (&quot;, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;p&quot;
+  }, {
+    &quot;href&quot;: &quot;https://en.wikipedia.org/wiki/GIF&quot;,
+    &quot;target&quot;: &quot;_blank&quot;,
+    &quot;rel&quot;: &quot;noreferrer&quot;
+  }), &quot;seriously&quot;), &quot;? \uD83D\uDE32) and what better time it is to see GIF in your terminal.&quot;), mdx(&quot;h2&quot;, {
+    &quot;id&quot;: &quot;getting-started&quot;
+  }, &quot;Getting Started&quot;), mdx(&quot;p&quot;, null, &quot;Requires Python 3 (with setuptools and pip), zlib, libjpeg, and ffmpeg, other dependencies are installed by &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;setup.py&quot;), &quot;.&quot;), mdx(&quot;h3&quot;, {
+    &quot;id&quot;: &quot;install-dependencies&quot;
+  }, &quot;Install dependencies&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-shell&quot;
+  }), &quot;# Debian based distros\nsudo apt-get install ffmpeg zlib* libjpeg* python3-setuptools\n\n# Mac\nbrew install ffmpeg zlib libjpeg python\n&quot;)), mdx(&quot;p&quot;, null, &quot;Your Python environment may need these installation tools -&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-shell&quot;
+  }), &quot;sudo easy_install3 pip\n\n# This should enable a pre-built Pillow wheel to be installed, otherwise\n# you may need to install Python, zlib, and libjpeg development libraries\n# so Pillow can compile from source.\n\npip3 install --user wheel\n&quot;)), mdx(&quot;h3&quot;, {
+    &quot;id&quot;: &quot;install-gif-for-cli&quot;
+  }, &quot;Install gif-for-cli&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-shell&quot;
+  }), &quot;pip3 install --user gif-for-cli\n&quot;)), mdx(&quot;p&quot;, null, &quot;Or download this &quot;, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;p&quot;
+  }, {
+    &quot;href&quot;: &quot;https://github.com/google/gif-for-cli&quot;,
+    &quot;target&quot;: &quot;_blank&quot;,
+    &quot;rel&quot;: &quot;noreferrer&quot;
+  }), &quot;repo&quot;), &quot; and run:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;python3 setup.py install --user\n&quot;)), mdx(&quot;p&quot;, null, &quot;The &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;gif-for-cli&quot;), &quot; command will likely be installed into &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;~/.local/bin&quot;), &quot; or similar, you may need to put that directory in your $PATH by adding this to your &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;.profile&quot;), &quot;:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-shell&quot;
+  }), &quot;\n# Linux\nif [ -d \&quot;$HOME/.local/bin\&quot; ] ; then\n    PATH=\&quot;$HOME/.local/bin:$PATH\&quot;\nfi\n\n# Mac, adjust for Python version\nif [ -d \&quot;$HOME/Library/Python/3.6/bin/\&quot; ] ; then\n    PATH=\&quot;$HOME/Library/Python/3.6/bin/:$PATH\&quot;\nfi\n\n&quot;)), mdx(&quot;h2&quot;, {
+    &quot;id&quot;: &quot;gif-in-action&quot;
+  }, &quot;GIF in action&quot;), mdx(&quot;p&quot;, null, &quot;I\u2019ll be using my favorite &quot;, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;p&quot;
+  }, {
+    &quot;href&quot;: &quot;https://slackmojis.com/&quot;,
+    &quot;target&quot;: &quot;_blank&quot;,
+    &quot;rel&quot;: &quot;noreferrer&quot;
+  }), &quot;Slackmoji&quot;), &quot; \u2014 &quot;, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;p&quot;
+  }, {
+    &quot;href&quot;: &quot;http://cultofthepartyparrot.com/&quot;,
+    &quot;target&quot;: &quot;_blank&quot;,
+    &quot;rel&quot;: &quot;noreferrer&quot;
+  }), &quot;Party Parrot&quot;), &quot; for playing in the terminal.&quot;), mdx(&quot;div&quot;, {
+    &quot;className&quot;: &quot;Image__Small&quot;
+  }, &quot;\n  &quot;, mdx(&quot;img&quot;, _extends({
+    parentName: &quot;div&quot;
+  }, {
+    &quot;src&quot;: &quot;/4c18ea74440a9569a7d446606c25c67b/party-parrot.gif&quot;,
+    &quot;title&quot;: &quot;Logo Title Text 1&quot;,
+    &quot;alt&quot;: &quot;Alt text&quot;,
+    &quot;style&quot;: {
+      &quot;height&quot;: &quot;200px&quot;,
+      &quot;width&quot;: &quot;auto&quot;
+    }
+  }))), mdx(&quot;p&quot;, null, &quot;Don\u2019t know about Party Parrot? It\u2019s quite an interesting story. Read it out &quot;, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;p&quot;
+  }, {
+    &quot;href&quot;: &quot;https://mashable.com/2017/07/13/cult-of-the-party-parrot-slack-reddit-meme/&quot;,
+    &quot;target&quot;: &quot;_blank&quot;,
+    &quot;rel&quot;: &quot;noreferrer&quot;
+  }), &quot;here&quot;), &quot;.&quot;), mdx(&quot;p&quot;, null, &quot;After the installation, run the following command in your terminal and enjoy the party \uD83D\uDE09. The following command queries the &quot;, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;p&quot;
+  }, {
+    &quot;href&quot;: &quot;https://tenor.com/gifapi&quot;,
+    &quot;target&quot;: &quot;_blank&quot;,
+    &quot;rel&quot;: &quot;noreferrer&quot;
+  }), &quot;Tenor\u2019s GIF API&quot;), &quot; and returns the top GIF.&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;gif-for-cli \&quot;party parrot\&quot;\n&quot;)), mdx(&quot;p&quot;, null, &quot;For exploring more gif-for-cli usage options, check the &quot;, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;p&quot;
+  }, {
+    &quot;href&quot;: &quot;https://github.com/google/gif-for-cli/blob/master/README.md#usage&quot;,
+    &quot;target&quot;: &quot;_blank&quot;,
+    &quot;rel&quot;: &quot;noreferrer&quot;
+  }), &quot;gif-for-cli repo&quot;), &quot;.&quot;), mdx(&quot;h2&quot;, {
+    &quot;id&quot;: &quot;what-about-windows-users-&quot;
+  }, &quot;What about Windows users? \uD83D\uDE15&quot;), mdx(&quot;p&quot;, null, &quot;Currently, this is not supported on Windows platform. Though, there is an &quot;, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;p&quot;
+  }, {
+    &quot;href&quot;: &quot;https://github.com/google/gif-for-cli/issues/5&quot;,
+    &quot;target&quot;: &quot;_blank&quot;,
+    &quot;rel&quot;: &quot;noreferrer&quot;
+  }), &quot;open issue&quot;), &quot; on GitHub\u2019s repo for Windows Command Prompt and PowerShell support. You can subscribe to that issue or keep a watch on the &quot;, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;p&quot;
+  }, {
+    &quot;href&quot;: &quot;https://github.com/google/gif-for-cli&quot;,
+    &quot;target&quot;: &quot;_blank&quot;,
+    &quot;rel&quot;: &quot;noreferrer&quot;
+  }), &quot;repository&quot;), &quot;. Or a much better initiative, switch to Linux \uD83D\uDE0E as soon as possible or just wait forever.&quot;), mdx(&quot;hr&quot;, null), mdx(&quot;p&quot;, null, &quot;Let\u2019s see what GIF you have put up on your terminal. Comment down below your terminal images with GIF in action \uD83D\uDCF7.&quot;), mdx(&quot;hr&quot;, null));
+}
+;
+MDXContent.isMDXComponent = true;</content:encoded></item><item><title><![CDATA[Beginner’s Guide To CSS Grid And Flexbox]]></title><description><![CDATA[An overview and comparison between CSS Grid and Flexbox layout techniques in CSS.]]></description><link>http://ayushgupta.tech/blog/beginner&apos;s-guide-to-css-grid-and-flexbox</link><guid isPermaLink="false">http://ayushgupta.tech/blog/beginner&apos;s-guide-to-css-grid-and-flexbox</guid><dc:creator><![CDATA[Ayush Gupta]]></dc:creator><pubDate>Sat, 15 Jun 2019 00:00:00 GMT</pubDate><content:encoded>function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i &lt; sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i &lt; sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; target[key] = source[key]; } return target; }
+
+/* @jsx mdx */
+var _frontmatter = {
+  &quot;title&quot;: &quot;Beginner’s Guide To CSS Grid And Flexbox&quot;,
+  &quot;author&quot;: &quot;Ayush Gupta&quot;,
+  &quot;date&quot;: &quot;2019-06-15T00:00:00.000Z&quot;,
+  &quot;hero&quot;: &quot;./images/css-grid-vs-flex-hero.webp&quot;,
+  &quot;excerpt&quot;: &quot;An overview and comparison between CSS Grid and Flexbox layout techniques in CSS.&quot;
+};
+
+var makeShortcode = function makeShortcode(name) {
+  return function MDXDefaultShortcode(props) {
+    console.warn(&quot;Component &quot; + name + &quot; was not imported, exported, or provided by MDXProvider as global scope&quot;);
+    return mdx(&quot;div&quot;, props);
+  };
+};
+
+var layoutProps = {
+  _frontmatter: _frontmatter
+};
+var MDXLayout = &quot;wrapper&quot;;
+return function MDXContent(_ref) {
+  var components = _ref.components,
+      props = _objectWithoutProperties(_ref, [&quot;components&quot;]);
+
+  return mdx(MDXLayout, _extends({}, layoutProps, props, {
+    components: components,
+    mdxType: &quot;MDXLayout&quot;
+  }), mdx(&quot;p&quot;, null, &quot;Everything you browse on the internet is contained in web pages. Those web pages accommodate content and that content needs a layout to fit itself in it. Nowadays, the technology has enabled us to browse the web on any screen dimension we wish for and your content should be responsive to any dimension we put forward. That\u2019s where responsive layout design knocks the door.&quot;), mdx(&quot;p&quot;, null, &quot;CSS has always been used to design the layout and looking of web pages but producing complicated multi-column layouts has always been fiddly and hackish, and frustrating to get working consistently and precisely across browsers as well. First, we used tables, floats, positioning and inline-block, but all of these techniques left out a lot of major functionality (vertical centering, for example).&quot;), mdx(&quot;p&quot;, null, &quot;To solve these layout complications, we invented proper responsive layout models available natively in the browser, out of which - Flexbox, CSS Grid and Bootstrap became most popular and are widely supported across all platforms &amp; browsers. These not only equipped us to create layouts that previously wasn\u2019t feasible to create without involving JavaScript, but these also make code easier to understand and maintain.&quot;), mdx(&quot;p&quot;, null, &quot;Here, I will precisely talk about Flexbox &amp; CSS Grid fundamentals and when to choose what model layout. I will write about each layout model in upcoming posts, but here I am pushing out their terminologies and properties for the sake of brevity.&quot;), mdx(&quot;blockquote&quot;, null, mdx(&quot;p&quot;, {
+    parentName: &quot;blockquote&quot;
+  }, &quot;Want to dive into them right now? Well, you\u2019re in luck! I have added some resources for further reading about them at the end of the article.&quot;)), mdx(&quot;h2&quot;, {
+    &quot;id&quot;: &quot;flexbox-fundamentals&quot;
+  }, &quot;Flexbox Fundamentals&quot;), mdx(&quot;p&quot;, null, &quot;The Flexbox (Flexible Box) Layout model emphasize at presenting a more methodological way to lay out, align and allocate space among items in a container, even when their size is unknown and/or dynamic (thus the word \u201Cflex\u201D).&quot;), mdx(&quot;blockquote&quot;, null, mdx(&quot;p&quot;, {
+    parentName: &quot;blockquote&quot;
+  }, &quot;\u201CThe main idea behind the flex layout is to give the container the ability to alter its items\u2019 width/height (and order) to best fill the available space (mostly to accommodate to all kind of display devices and screen sizes).\u201D&quot;)), mdx(&quot;blockquote&quot;, null, mdx(&quot;p&quot;, {
+    parentName: &quot;blockquote&quot;
+  }, &quot;\u2014 &quot;, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;p&quot;
+  }, {
+    &quot;href&quot;: &quot;https://chriscoyier.net/&quot;,
+    &quot;target&quot;: &quot;_blank&quot;,
+    &quot;rel&quot;: &quot;noreferrer&quot;
+  }), &quot;Chris Coyier&quot;))), mdx(&quot;div&quot;, {
+    &quot;className&quot;: &quot;Image__Small&quot;
+  }, &quot;\n  &quot;, mdx(&quot;span&quot;, _extends({
+    parentName: &quot;div&quot;
+  }, {
+    &quot;className&quot;: &quot;gatsby-resp-image-wrapper&quot;,
+    &quot;style&quot;: {
+      &quot;position&quot;: &quot;relative&quot;,
+      &quot;display&quot;: &quot;block&quot;,
+      &quot;marginLeft&quot;: &quot;auto&quot;,
+      &quot;marginRight&quot;: &quot;auto&quot;,
+      &quot;maxWidth&quot;: &quot;560px&quot;
+    }
+  }), &quot;\n      &quot;, mdx(&quot;span&quot;, _extends({
+    parentName: &quot;span&quot;
+  }, {
+    &quot;className&quot;: &quot;gatsby-resp-image-background-image&quot;,
+    &quot;style&quot;: {
+      &quot;paddingBottom&quot;: &quot;56.25%&quot;,
+      &quot;position&quot;: &quot;relative&quot;,
+      &quot;bottom&quot;: &quot;0&quot;,
+      &quot;left&quot;: &quot;0&quot;,
+      &quot;backgroundImage&quot;: &quot;url(&apos;data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAABQBACdASoUAAsAPtFWo0uoJKMhsAgBABoJYwCdICd6A5/8B7wmmYME5j0AAP708ted0eLPZwMPbRqGQgokLcr2Z5QXRTYdqDTUH3//mkbXBTeZBRQsbkXALwX3zV1+0AA=&apos;)&quot;,
+      &quot;backgroundSize&quot;: &quot;cover&quot;,
+      &quot;display&quot;: &quot;block&quot;
+    }
+  })), &quot;\n  &quot;, mdx(&quot;picture&quot;, {
+    parentName: &quot;span&quot;
+  }, &quot;\n        &quot;, mdx(&quot;source&quot;, _extends({
+    parentName: &quot;picture&quot;
+  }, {
+    &quot;srcSet&quot;: [&quot;/static/4e24e0909091ca5b5f8da631e11cc1ac/768f8/flexbox-fundamentals.webp 560w&quot;],
+    &quot;sizes&quot;: &quot;(max-width: 560px) 100vw, 560px&quot;,
+    &quot;type&quot;: &quot;image/webp&quot;
+  })), &quot;\n        &quot;, mdx(&quot;source&quot;, _extends({
+    parentName: &quot;picture&quot;
+  }, {
+    &quot;srcSet&quot;: [&quot;/static/4e24e0909091ca5b5f8da631e11cc1ac/768f8/flexbox-fundamentals.webp 560w&quot;],
+    &quot;sizes&quot;: &quot;(max-width: 560px) 100vw, 560px&quot;,
+    &quot;type&quot;: &quot;image/webp&quot;
+  })), &quot;\n        &quot;, mdx(&quot;img&quot;, _extends({
+    parentName: &quot;picture&quot;
+  }, {
+    &quot;className&quot;: &quot;gatsby-resp-image-image&quot;,
+    &quot;src&quot;: &quot;/static/4e24e0909091ca5b5f8da631e11cc1ac/768f8/flexbox-fundamentals.webp&quot;,
+    &quot;alt&quot;: &quot;One-dimensional approach of Flexbox.&quot;,
+    &quot;title&quot;: &quot;One-dimensional approach of Flexbox&quot;,
+    &quot;loading&quot;: &quot;lazy&quot;,
+    &quot;style&quot;: {
+      &quot;width&quot;: &quot;100%&quot;,
+      &quot;height&quot;: &quot;100%&quot;,
+      &quot;margin&quot;: &quot;0&quot;,
+      &quot;verticalAlign&quot;: &quot;middle&quot;,
+      &quot;position&quot;: &quot;absolute&quot;,
+      &quot;top&quot;: &quot;0&quot;,
+      &quot;left&quot;: &quot;0&quot;
+    }
+  })), &quot;\n      &quot;), &quot;\n    &quot;), &quot;\n    &quot;, mdx(&quot;div&quot;, _extends({
+    parentName: &quot;div&quot;
+  }, {
+    &quot;style&quot;: {
+      &quot;textAlign&quot;: &quot;center&quot;
+    }
+  }), &quot;One-dimensional approach of Flexbox&quot;)), mdx(&quot;p&quot;, null, &quot;A flex container expands its items to fill available free space or shrinks them to prevent overflow. It provides a better arrangement of all of the page elements. It is a &quot;, mdx(&quot;strong&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;one-dimensional&quot;), &quot; layout model that offers space allocation between items in an interface and robust alignment capabilities.&quot;), mdx(&quot;h2&quot;, {
+    &quot;id&quot;: &quot;css-grid-fundamentals&quot;
+  }, &quot;CSS Grid Fundamentals&quot;), mdx(&quot;p&quot;, null, &quot;CSS Grid Layout is a CSS layout method developed for the &quot;, mdx(&quot;strong&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;two-dimensional&quot;), &quot; layout of items on a webpage or an application, meaning it can manage both columns and rows.&quot;), mdx(&quot;blockquote&quot;, null, mdx(&quot;p&quot;, {
+    parentName: &quot;blockquote&quot;
+  }, &quot;CSS Grid outshines at dividing a page into several sections or defining the correlation in terms of size, position, and layer.&quot;)), mdx(&quot;p&quot;, null, &quot;Like tables, grid layout allows us to align components into columns and rows. However, numerous layouts are either achievable or easier with CSS grid than they were with tables. For example, a grid container\u2019s children could place themselves so they truly overlap and layer, alike CSS positioned elements.&quot;), mdx(&quot;div&quot;, {
+    &quot;className&quot;: &quot;Image__Small&quot;
+  }, &quot;\n  &quot;, mdx(&quot;span&quot;, _extends({
+    parentName: &quot;div&quot;
+  }, {
+    &quot;className&quot;: &quot;gatsby-resp-image-wrapper&quot;,
+    &quot;style&quot;: {
+      &quot;position&quot;: &quot;relative&quot;,
+      &quot;display&quot;: &quot;block&quot;,
+      &quot;marginLeft&quot;: &quot;auto&quot;,
+      &quot;marginRight&quot;: &quot;auto&quot;,
+      &quot;maxWidth&quot;: &quot;560px&quot;
+    }
+  }), &quot;\n      &quot;, mdx(&quot;span&quot;, _extends({
+    parentName: &quot;span&quot;
+  }, {
+    &quot;className&quot;: &quot;gatsby-resp-image-background-image&quot;,
+    &quot;style&quot;: {
+      &quot;paddingBottom&quot;: &quot;56.25%&quot;,
+      &quot;position&quot;: &quot;relative&quot;,
+      &quot;bottom&quot;: &quot;0&quot;,
+      &quot;left&quot;: &quot;0&quot;,
+      &quot;backgroundImage&quot;: &quot;url(&apos;data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAADQAwCdASoUAAsAPtFcpkyoJSOiMAgBABoJbAC7H8ADA1ozJGs3TgAA/vPIqBqBZUynA1VvpBYO4TW0WNIUdx3Q1sUV/0i8tKaTKh2rC4mf962EpFTD+jNmVWuZJasMMyeOA+I2kfIb4vvCY/5AAA==&apos;)&quot;,
+      &quot;backgroundSize&quot;: &quot;cover&quot;,
+      &quot;display&quot;: &quot;block&quot;
+    }
+  })), &quot;\n  &quot;, mdx(&quot;picture&quot;, {
+    parentName: &quot;span&quot;
+  }, &quot;\n        &quot;, mdx(&quot;source&quot;, _extends({
+    parentName: &quot;picture&quot;
+  }, {
+    &quot;srcSet&quot;: [&quot;/static/fbd0edc76c910e7954b0e475622cdb1c/768f8/css-grid-fundamentals.webp 560w&quot;],
+    &quot;sizes&quot;: &quot;(max-width: 560px) 100vw, 560px&quot;,
+    &quot;type&quot;: &quot;image/webp&quot;
+  })), &quot;\n        &quot;, mdx(&quot;source&quot;, _extends({
+    parentName: &quot;picture&quot;
+  }, {
+    &quot;srcSet&quot;: [&quot;/static/fbd0edc76c910e7954b0e475622cdb1c/768f8/css-grid-fundamentals.webp 560w&quot;],
+    &quot;sizes&quot;: &quot;(max-width: 560px) 100vw, 560px&quot;,
+    &quot;type&quot;: &quot;image/webp&quot;
+  })), &quot;\n        &quot;, mdx(&quot;img&quot;, _extends({
+    parentName: &quot;picture&quot;
+  }, {
+    &quot;className&quot;: &quot;gatsby-resp-image-image&quot;,
+    &quot;src&quot;: &quot;/static/fbd0edc76c910e7954b0e475622cdb1c/768f8/css-grid-fundamentals.webp&quot;,
+    &quot;alt&quot;: &quot;Two-dimensional approach of CSS Grid.&quot;,
+    &quot;title&quot;: &quot;Two-dimensional approach of CSS Grid.&quot;,
+    &quot;loading&quot;: &quot;lazy&quot;,
+    &quot;style&quot;: {
+      &quot;width&quot;: &quot;100%&quot;,
+      &quot;height&quot;: &quot;100%&quot;,
+      &quot;margin&quot;: &quot;0&quot;,
+      &quot;verticalAlign&quot;: &quot;middle&quot;,
+      &quot;position&quot;: &quot;absolute&quot;,
+      &quot;top&quot;: &quot;0&quot;,
+      &quot;left&quot;: &quot;0&quot;
+    }
+  })), &quot;\n      &quot;), &quot;\n    &quot;), &quot;\n    &quot;, mdx(&quot;div&quot;, _extends({
+    parentName: &quot;div&quot;
+  }, {
+    &quot;style&quot;: {
+      &quot;textAlign&quot;: &quot;center&quot;
+    }
+  }), &quot;Two-dimensional approach of CSS Grid&quot;)), mdx(&quot;h2&quot;, {
+    &quot;id&quot;: &quot;css-grid-vs-flexbox&quot;
+  }, &quot;CSS Grid vs Flexbox&quot;), mdx(&quot;ol&quot;, null, mdx(&quot;li&quot;, {
+    parentName: &quot;ol&quot;
+  }, mdx(&quot;p&quot;, {
+    parentName: &quot;li&quot;
+  }, &quot;CSS Grid Layout is a two-dimensional system, meaning it can handle both columns and rows, unlike flexbox which is largely a one-dimensional system (either in a column or a row).&quot;)), mdx(&quot;li&quot;, {
+    parentName: &quot;ol&quot;
+  }, mdx(&quot;p&quot;, {
+    parentName: &quot;li&quot;
+  }, &quot;A core difference between CSS Grid and Flexbox is that \u2014 CSS Grid\u2019s approach is layout-first while Flexbox\u2019 approach is content-first.\n&quot;, mdx(&quot;em&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;If you are well aware of your content before making layout, then blindly opt for Flexbox and if not, opt for CSS Grid.&quot;))), mdx(&quot;li&quot;, {
+    parentName: &quot;ol&quot;
+  }, mdx(&quot;p&quot;, {
+    parentName: &quot;li&quot;
+  }, &quot;Flexbox layout is most appropriate to the components of an application (as most of them are fundamentally linear), and small-scale layouts, while the Grid layout is intended for larger scale layouts which aren\u2019t linear in their design.&quot;)), mdx(&quot;li&quot;, {
+    parentName: &quot;ol&quot;
+  }, mdx(&quot;p&quot;, {
+    parentName: &quot;li&quot;
+  }, &quot;If you only need to define a layout as a row or a column, then you probably need flexbox. If you want to define a grid and fit content into it in two dimensions \u2014 you need the grid.&quot;))), mdx(&quot;blockquote&quot;, null, mdx(&quot;p&quot;, {
+    parentName: &quot;blockquote&quot;
+  }, &quot;Tip:\nYou can even combine these layout models. Note that you can use a Flexbox container inside a CSS Grid container but you cannot implement it vice-versa. See image below for a visual perspective.&quot;)), mdx(&quot;div&quot;, {
+    &quot;className&quot;: &quot;Image__Small&quot;
+  }, &quot;\n  &quot;, mdx(&quot;span&quot;, _extends({
+    parentName: &quot;div&quot;
+  }, {
+    &quot;className&quot;: &quot;gatsby-resp-image-wrapper&quot;,
+    &quot;style&quot;: {
+      &quot;position&quot;: &quot;relative&quot;,
+      &quot;display&quot;: &quot;block&quot;,
+      &quot;marginLeft&quot;: &quot;auto&quot;,
+      &quot;marginRight&quot;: &quot;auto&quot;,
+      &quot;maxWidth&quot;: &quot;1920px&quot;
+    }
+  }), &quot;\n      &quot;, mdx(&quot;span&quot;, _extends({
+    parentName: &quot;span&quot;
+  }, {
+    &quot;className&quot;: &quot;gatsby-resp-image-background-image&quot;,
+    &quot;style&quot;: {
+      &quot;paddingBottom&quot;: &quot;56.25%&quot;,
+      &quot;position&quot;: &quot;relative&quot;,
+      &quot;bottom&quot;: &quot;0&quot;,
+      &quot;left&quot;: &quot;0&quot;,
+      &quot;backgroundImage&quot;: &quot;url(&apos;data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADwAwCdASoUAAsAPtFWo0uoJKMhsAgBABoJbAC06CHPLysGr+OJ/xAAAP7ybLW6R+gv8arza34zLWzRv/6w0DtXibVW2Cudq+2VHKLjbzCv49wXf2FPGNJpnHqU3vrG/fN9+CVOQOAAAA==&apos;)&quot;,
+      &quot;backgroundSize&quot;: &quot;cover&quot;,
+      &quot;display&quot;: &quot;block&quot;
+    }
+  })), &quot;\n  &quot;, mdx(&quot;picture&quot;, {
+    parentName: &quot;span&quot;
+  }, &quot;\n        &quot;, mdx(&quot;source&quot;, _extends({
+    parentName: &quot;picture&quot;
+  }, {
+    &quot;srcSet&quot;: [&quot;/static/d951d068c65f13050bbc0870e14bb8a6/f3ff0/flex-inside-grid.webp 1920w&quot;],
+    &quot;sizes&quot;: &quot;(max-width: 1920px) 100vw, 1920px&quot;,
+    &quot;type&quot;: &quot;image/webp&quot;
+  })), &quot;\n        &quot;, mdx(&quot;source&quot;, _extends({
+    parentName: &quot;picture&quot;
+  }, {
+    &quot;srcSet&quot;: [&quot;/static/d951d068c65f13050bbc0870e14bb8a6/f3ff0/flex-inside-grid.webp 1920w&quot;],
+    &quot;sizes&quot;: &quot;(max-width: 1920px) 100vw, 1920px&quot;,
+    &quot;type&quot;: &quot;image/webp&quot;
+  })), &quot;\n        &quot;, mdx(&quot;img&quot;, _extends({
+    parentName: &quot;picture&quot;
+  }, {
+    &quot;className&quot;: &quot;gatsby-resp-image-image&quot;,
+    &quot;src&quot;: &quot;/static/d951d068c65f13050bbc0870e14bb8a6/f3ff0/flex-inside-grid.webp&quot;,
+    &quot;alt&quot;: &quot;Flexbox Container inside a Grid Container.&quot;,
+    &quot;title&quot;: &quot;Flexbox Container inside a Grid Container.&quot;,
+    &quot;loading&quot;: &quot;lazy&quot;,
+    &quot;style&quot;: {
+      &quot;width&quot;: &quot;100%&quot;,
+      &quot;height&quot;: &quot;100%&quot;,
+      &quot;margin&quot;: &quot;0&quot;,
+      &quot;verticalAlign&quot;: &quot;middle&quot;,
+      &quot;position&quot;: &quot;absolute&quot;,
+      &quot;top&quot;: &quot;0&quot;,
+      &quot;left&quot;: &quot;0&quot;
+    }
+  })), &quot;\n      &quot;), &quot;\n    &quot;), &quot;\n  &quot;, mdx(&quot;div&quot;, _extends({
+    parentName: &quot;div&quot;
+  }, {
+    &quot;style&quot;: {
+      &quot;textAlign&quot;: &quot;center&quot;
+    }
+  }), &quot;Flexbox Container inside a Grid Container&quot;)), mdx(&quot;p&quot;, null, &quot;I also made a &quot;, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;p&quot;
+  }, {
+    &quot;href&quot;: &quot;https://app.ludus.one/634ef6b9-4ed2-420d-b24f-333574e625f2&quot;,
+    &quot;target&quot;: &quot;_blank&quot;,
+    &quot;rel&quot;: &quot;noreferrer&quot;
+  }), &quot;presentation&quot;), &quot; on CSS Grid vs Flexbox on Ludus. Check it out.&quot;), mdx(&quot;div&quot;, {
+    style: {
+      &quot;position&quot;: &quot;relative&quot;,
+      &quot;paddingBottom&quot;: &quot;calc(56.25% + 58px)&quot;,
+      &quot;height&quot;: &quot;0&quot;,
+      &quot;overflow&quot;: &quot;hidden&quot;,
+      &quot;maxWidth&quot;: &quot;100%&quot;
+    }
+  }, mdx(&quot;iframe&quot;, {
+    src: &quot;https://app.ludus.one/634ef6b9-4ed2-420d-b24f-333574e625f2/full?controls=always&quot;,
+    frameBorder: &quot;0&quot;,
+    allowFullScreen: true,
+    style: {
+      &quot;position&quot;: &quot;absolute&quot;,
+      &quot;top&quot;: &quot;0&quot;,
+      &quot;left&quot;: &quot;0&quot;,
+      &quot;width&quot;: &quot;100%&quot;,
+      &quot;height&quot;: &quot;100%&quot;
+    }
+  })), mdx(&quot;h2&quot;, {
+    &quot;id&quot;: &quot;browser-support--bugs&quot;
+  }, &quot;Browser Support &amp; Bugs&quot;), mdx(&quot;p&quot;, null, &quot;Most modern web browsers now support both CSS Grid and Flexbox. The images below show detailed analysis of browser support for Grid &amp; Flexbox.&quot;), mdx(&quot;div&quot;, {
+    &quot;className&quot;: &quot;Image__Small&quot;
+  }, &quot;\n  &quot;, mdx(&quot;span&quot;, _extends({
+    parentName: &quot;div&quot;
+  }, {
+    &quot;className&quot;: &quot;gatsby-resp-image-wrapper&quot;,
+    &quot;style&quot;: {
+      &quot;position&quot;: &quot;relative&quot;,
+      &quot;display&quot;: &quot;block&quot;,
+      &quot;marginLeft&quot;: &quot;auto&quot;,
+      &quot;marginRight&quot;: &quot;auto&quot;,
+      &quot;maxWidth&quot;: &quot;1278px&quot;
+    }
+  }), &quot;\n      &quot;, mdx(&quot;span&quot;, _extends({
+    parentName: &quot;span&quot;
+  }, {
+    &quot;className&quot;: &quot;gatsby-resp-image-background-image&quot;,
+    &quot;style&quot;: {
+      &quot;paddingBottom&quot;: &quot;62.050078247261354%&quot;,
+      &quot;position&quot;: &quot;relative&quot;,
+      &quot;bottom&quot;: &quot;0&quot;,
+      &quot;left&quot;: &quot;0&quot;,
+      &quot;backgroundImage&quot;: &quot;url(&apos;data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAADwAwCdASoUAAwAPtFUo0uoJKMhsAgBABoJQBOmUDX/wHkf+Dv4NrFcAP7iJ7JPTMpg469SxfsfZHEqcoJKMsNDNTUf7RtRxe/kwN+aaIEkuDLy1SFzTYLh5/odqrAv29O9nhRTDGk0RHAWECbJXTZMFBDgAA==&apos;)&quot;,
+      &quot;backgroundSize&quot;: &quot;cover&quot;,
+      &quot;display&quot;: &quot;block&quot;
+    }
+  })), &quot;\n  &quot;, mdx(&quot;picture&quot;, {
+    parentName: &quot;span&quot;
+  }, &quot;\n        &quot;, mdx(&quot;source&quot;, _extends({
+    parentName: &quot;picture&quot;
+  }, {
+    &quot;srcSet&quot;: [&quot;/static/46a8be216ff565f35520d96a777bf3e3/c1533/caniuse-flex.webp 1278w&quot;],
+    &quot;sizes&quot;: &quot;(max-width: 1278px) 100vw, 1278px&quot;,
+    &quot;type&quot;: &quot;image/webp&quot;
+  })), &quot;\n        &quot;, mdx(&quot;source&quot;, _extends({
+    parentName: &quot;picture&quot;
+  }, {
+    &quot;srcSet&quot;: [&quot;/static/46a8be216ff565f35520d96a777bf3e3/c1533/caniuse-flex.webp 1278w&quot;],
+    &quot;sizes&quot;: &quot;(max-width: 1278px) 100vw, 1278px&quot;,
+    &quot;type&quot;: &quot;image/webp&quot;
+  })), &quot;\n        &quot;, mdx(&quot;img&quot;, _extends({
+    parentName: &quot;picture&quot;
+  }, {
+    &quot;className&quot;: &quot;gatsby-resp-image-image&quot;,
+    &quot;src&quot;: &quot;/static/46a8be216ff565f35520d96a777bf3e3/c1533/caniuse-flex.webp&quot;,
+    &quot;alt&quot;: &quot;CSS Flexbox Browser Support.&quot;,
+    &quot;title&quot;: &quot;CSS Flexbox Browser Support.&quot;,
+    &quot;loading&quot;: &quot;lazy&quot;,
+    &quot;style&quot;: {
+      &quot;width&quot;: &quot;100%&quot;,
+      &quot;height&quot;: &quot;100%&quot;,
+      &quot;margin&quot;: &quot;0&quot;,
+      &quot;verticalAlign&quot;: &quot;middle&quot;,
+      &quot;position&quot;: &quot;absolute&quot;,
+      &quot;top&quot;: &quot;0&quot;,
+      &quot;left&quot;: &quot;0&quot;
+    }
+  })), &quot;\n      &quot;), &quot;\n    &quot;), &quot;\n  &quot;, mdx(&quot;div&quot;, _extends({
+    parentName: &quot;div&quot;
+  }, {
+    &quot;style&quot;: {
+      &quot;textAlign&quot;: &quot;center&quot;
+    }
+  }), &quot;CSS Flexbox Browser Support. (&quot;, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;div&quot;
+  }, {
+    &quot;href&quot;: &quot;https://caniuse.com/#feat=flexbox&quot;
+  }), &quot;Source&quot;), &quot;)&quot;)), mdx(&quot;div&quot;, {
+    &quot;className&quot;: &quot;Image__Small&quot;
+  }, &quot;\n  &quot;, mdx(&quot;span&quot;, _extends({
+    parentName: &quot;div&quot;
+  }, {
+    &quot;className&quot;: &quot;gatsby-resp-image-wrapper&quot;,
+    &quot;style&quot;: {
+      &quot;position&quot;: &quot;relative&quot;,
+      &quot;display&quot;: &quot;block&quot;,
+      &quot;marginLeft&quot;: &quot;auto&quot;,
+      &quot;marginRight&quot;: &quot;auto&quot;,
+      &quot;maxWidth&quot;: &quot;1160px&quot;
+    }
+  }), &quot;\n      &quot;, mdx(&quot;span&quot;, _extends({
+    parentName: &quot;span&quot;
+  }, {
+    &quot;className&quot;: &quot;gatsby-resp-image-background-image&quot;,
+    &quot;style&quot;: {
+      &quot;paddingBottom&quot;: &quot;79.05172413793103%&quot;,
+      &quot;position&quot;: &quot;relative&quot;,
+      &quot;bottom&quot;: &quot;0&quot;,
+      &quot;left&quot;: &quot;0&quot;,
+      &quot;backgroundImage&quot;: &quot;url(&apos;data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAADQAwCdASoUABAAPtFUo0uoJKMhsAgBABoJYgCsACHXGmfNXjQwQRAA/tfiTDz0N5S0Zl+WeddlRWI8kuSJifkdqsSeQ4XHyezBjb4t6pDYzqpDqLcIj7tA8w3YumocMfQimRUFZ8qt5wLMk+28AVWg5JcmFQ4h3H1AAA==&apos;)&quot;,
+      &quot;backgroundSize&quot;: &quot;cover&quot;,
+      &quot;display&quot;: &quot;block&quot;
+    }
+  })), &quot;\n  &quot;, mdx(&quot;picture&quot;, {
+    parentName: &quot;span&quot;
+  }, &quot;\n        &quot;, mdx(&quot;source&quot;, _extends({
+    parentName: &quot;picture&quot;
+  }, {
+    &quot;srcSet&quot;: [&quot;/static/e901714d6d58ad2cd8bd0354d9addce4/40a05/caniuse-grid.webp 1160w&quot;],
+    &quot;sizes&quot;: &quot;(max-width: 1160px) 100vw, 1160px&quot;,
+    &quot;type&quot;: &quot;image/webp&quot;
+  })), &quot;\n        &quot;, mdx(&quot;source&quot;, _extends({
+    parentName: &quot;picture&quot;
+  }, {
+    &quot;srcSet&quot;: [&quot;/static/e901714d6d58ad2cd8bd0354d9addce4/40a05/caniuse-grid.webp 1160w&quot;],
+    &quot;sizes&quot;: &quot;(max-width: 1160px) 100vw, 1160px&quot;,
+    &quot;type&quot;: &quot;image/webp&quot;
+  })), &quot;\n        &quot;, mdx(&quot;img&quot;, _extends({
+    parentName: &quot;picture&quot;
+  }, {
+    &quot;className&quot;: &quot;gatsby-resp-image-image&quot;,
+    &quot;src&quot;: &quot;/static/e901714d6d58ad2cd8bd0354d9addce4/40a05/caniuse-grid.webp&quot;,
+    &quot;alt&quot;: &quot;CSS Grid Layout Browser Support.&quot;,
+    &quot;title&quot;: &quot;CSS Grid Layout Browser Support.&quot;,
+    &quot;loading&quot;: &quot;lazy&quot;,
+    &quot;style&quot;: {
+      &quot;width&quot;: &quot;100%&quot;,
+      &quot;height&quot;: &quot;100%&quot;,
+      &quot;margin&quot;: &quot;0&quot;,
+      &quot;verticalAlign&quot;: &quot;middle&quot;,
+      &quot;position&quot;: &quot;absolute&quot;,
+      &quot;top&quot;: &quot;0&quot;,
+      &quot;left&quot;: &quot;0&quot;
+    }
+  })), &quot;\n      &quot;), &quot;\n    &quot;), &quot;\n  &quot;, mdx(&quot;div&quot;, _extends({
+    parentName: &quot;div&quot;
+  }, {
+    &quot;style&quot;: {
+      &quot;textAlign&quot;: &quot;center&quot;
+    }
+  }), &quot;CSS Grid Layout Browser Support. (&quot;, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;div&quot;
+  }, {
+    &quot;href&quot;: &quot;https://caniuse.com/#feat=css-grid&quot;
+  }), &quot;Source&quot;), &quot;)&quot;)), mdx(&quot;p&quot;, null, &quot;Still, if you want your content to be consistent across all browsers, you may consider writing some more lines of CSS with help of following articles for each of layout model.&quot;), mdx(&quot;ul&quot;, null, mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;li&quot;
+  }, {
+    &quot;href&quot;: &quot;https://css-tricks.com/using-flexbox/&quot;,
+    &quot;target&quot;: &quot;_blank&quot;,
+    &quot;rel&quot;: &quot;noreferrer&quot;
+  }), &quot;Using Flexbox: Mixing Old and New for the Best Browser Support&quot;)), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;li&quot;
+  }, {
+    &quot;href&quot;: &quot;https://dev.opera.com/articles/advanced-cross-browser-flexbox/#fallbacks&quot;,
+    &quot;target&quot;: &quot;_blank&quot;,
+    &quot;rel&quot;: &quot;noreferrer&quot;
+  }), &quot;Advanced Cross-Browser Flexbox&quot;)), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;li&quot;
+  }, {
+    &quot;href&quot;: &quot;https://css-tricks.com/browser-compatibility-css-grid-layouts-simple-sass-mixins/&quot;,
+    &quot;target&quot;: &quot;_blank&quot;,
+    &quot;rel&quot;: &quot;noreferrer&quot;
+  }), &quot;Browser Compatibility for CSS Grid Layouts with Simple Sass Mixins&quot;)), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;li&quot;
+  }, {
+    &quot;href&quot;: &quot;https://www.smashingmagazine.com/2017/11/css-grid-supporting-browsers-without-grid/&quot;,
+    &quot;target&quot;: &quot;_blank&quot;,
+    &quot;rel&quot;: &quot;noreferrer&quot;
+  }), &quot;Using CSS Grid: Supporting Browsers Without Grid&quot;))), mdx(&quot;h3&quot;, {
+    &quot;id&quot;: &quot;bugs--issues&quot;
+  }, &quot;Bugs &amp; Issues&quot;), mdx(&quot;ul&quot;, null, mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;li&quot;
+  }, {
+    &quot;href&quot;: &quot;https://github.com/rachelandrew/gridbugs&quot;,
+    &quot;target&quot;: &quot;_blank&quot;,
+    &quot;rel&quot;: &quot;noreferrer&quot;
+  }), &quot;GridBugs by Rachel Andrew&quot;)), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;li&quot;
+  }, {
+    &quot;href&quot;: &quot;https://github.com/philipwalton/flexbugs&quot;,
+    &quot;target&quot;: &quot;_blank&quot;,
+    &quot;rel&quot;: &quot;noreferrer&quot;
+  }), &quot;FlexBugs by Philip Walton&quot;))), mdx(&quot;h2&quot;, {
+    &quot;id&quot;: &quot;hey-what-about-bootstrap&quot;
+  }, &quot;Hey, what about Bootstrap?&quot;), mdx(&quot;p&quot;, null, &quot;I am not covering &quot;, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;p&quot;
+  }, {
+    &quot;href&quot;: &quot;https://getbootstrap.com/&quot;,
+    &quot;target&quot;: &quot;_blank&quot;,
+    &quot;rel&quot;: &quot;noreferrer&quot;
+  }), &quot;Bootstrap&quot;), &quot; and its fundamentals here but below is a &quot;, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;p&quot;
+  }, {
+    &quot;href&quot;: &quot;https://hackernoon.com/how-css-grid-beats-bootstrap-85d5881cf163&quot;,
+    &quot;target&quot;: &quot;_blank&quot;,
+    &quot;rel&quot;: &quot;noreferrer&quot;
+  }), &quot;helpful article&quot;), &quot; for you to read if you\u2019re interested.&quot;), mdx(&quot;h2&quot;, {
+    &quot;id&quot;: &quot;resources-for-further-reading&quot;
+  }, &quot;Resources for further reading&quot;), mdx(&quot;ul&quot;, null, mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, mdx(&quot;p&quot;, {
+    parentName: &quot;li&quot;
+  }, &quot;Videos Tutorials&quot;), mdx(&quot;ol&quot;, {
+    parentName: &quot;li&quot;
+  }, mdx(&quot;li&quot;, {
+    parentName: &quot;ol&quot;
+  }, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;li&quot;
+  }, {
+    &quot;href&quot;: &quot;https://flexbox.io/&quot;,
+    &quot;target&quot;: &quot;_blank&quot;,
+    &quot;rel&quot;: &quot;noreferrer&quot;
+  }), &quot;What The Flexbox?! by Wes Bos&quot;)), mdx(&quot;li&quot;, {
+    parentName: &quot;ol&quot;
+  }, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;li&quot;
+  }, {
+    &quot;href&quot;: &quot;https://cssgrid.io/&quot;,
+    &quot;target&quot;: &quot;_blank&quot;,
+    &quot;rel&quot;: &quot;noreferrer&quot;
+  }), &quot;CSS Grid by Wes Bos&quot;)))), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, mdx(&quot;p&quot;, {
+    parentName: &quot;li&quot;
+  }, &quot;Articles&quot;), mdx(&quot;ol&quot;, {
+    parentName: &quot;li&quot;
+  }, mdx(&quot;li&quot;, {
+    parentName: &quot;ol&quot;
+  }, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;li&quot;
+  }, {
+    &quot;href&quot;: &quot;https://css-tricks.com/snippets/css/complete-guide-grid/&quot;,
+    &quot;target&quot;: &quot;_blank&quot;,
+    &quot;rel&quot;: &quot;noreferrer&quot;
+  }), &quot;A Complete Guide to Grid&quot;)), mdx(&quot;li&quot;, {
+    parentName: &quot;ol&quot;
+  }, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;li&quot;
+  }, {
+    &quot;href&quot;: &quot;https://gridbyexample.com/&quot;,
+    &quot;target&quot;: &quot;_blank&quot;,
+    &quot;rel&quot;: &quot;noreferrer&quot;
+  }), &quot;Grid by Example&quot;)), mdx(&quot;li&quot;, {
+    parentName: &quot;ol&quot;
+  }, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;li&quot;
+  }, {
+    &quot;href&quot;: &quot;https://css-tricks.com/snippets/css/a-guide-to-flexbox/&quot;,
+    &quot;target&quot;: &quot;_blank&quot;,
+    &quot;rel&quot;: &quot;noreferrer&quot;
+  }), &quot;A Complete Guide to Flexbox&quot;)), mdx(&quot;li&quot;, {
+    parentName: &quot;ol&quot;
+  }, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;li&quot;
+  }, {
+    &quot;href&quot;: &quot;https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties&quot;,
+    &quot;target&quot;: &quot;_blank&quot;,
+    &quot;rel&quot;: &quot;noreferrer&quot;
+  }), &quot;A Visual Guide to CSS3 Flexbox Properties&quot;)), mdx(&quot;li&quot;, {
+    parentName: &quot;ol&quot;
+  }, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;li&quot;
+  }, {
+    &quot;href&quot;: &quot;https://flexboxfroggy.com/&quot;,
+    &quot;target&quot;: &quot;_blank&quot;,
+    &quot;rel&quot;: &quot;noreferrer&quot;
+  }), &quot;Flexbox Froggy \u2014 A game for learning CSS flexbox&quot;))))), mdx(&quot;hr&quot;, null), mdx(&quot;p&quot;, null, &quot;This is my first post ever. Your each \uD83D\uDC4F would motivate me to write more helpful articles and make open source contribution. You can further connect with me on LinkedIn, Instagram, GitHub, Twitter and Facebook.&quot;));
+}
+;
+MDXContent.isMDXComponent = true;</content:encoded></item></channel></rss>
